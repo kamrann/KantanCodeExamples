@@ -1,5 +1,6 @@
 # Kantan Code Examples
 UE4 project containing full code examples to accompany [articles on the website](http://kantandev.com/articles).
+Code is organised into separate modules for each article.
 
 Articles
 ---
