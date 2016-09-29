@@ -57,7 +57,7 @@ namespace A2_DetailsCustomization
 				MyObject->GeneratedList.Empty();
 				for(int32 i = 0; i < MyObject->Count; ++i)
 				{
-					MyObject->GeneratedList.Add(MyObject->BaseString + TEXT("_") + (MyObject->Count + 1));
+					MyObject->GeneratedList.Add(MyObject->BaseString + TEXT("_") + FString::FromInt(i + 1));
 				}
 			}
 
@@ -65,7 +65,7 @@ namespace A2_DetailsCustomization
 		};
 
 		Cat.AddCustomRow(LOCTEXT("MyButtonRowFilterString", "Search Filter Keywords"))
-			.WholeRowContent()
+			.WholeRowContent().HAlign(EHorizontalAlignment::HAlign_Left)
 			[
 				SNew(SButton)
 				.Text(LOCTEXT("RegenerateBtnText", "Regenerate List"))

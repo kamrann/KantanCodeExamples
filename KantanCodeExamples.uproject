@@ -3,16 +3,26 @@
 	"EngineAssociation": "4.12",
 	"Category": "",
 	"Description": "",
-	"Modules": [
-		{
-			"Name": "KantanCodeExamplesCommon",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "A1_GatherSubclasses",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-	]
+  "Modules": [
+    {
+      "Name": "KantanCodeExamplesCommon",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "A1_GatherSubclasses",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "A2_DetailsCustomization",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "A2_DetailsCustomizationEditor",
+      "Type": "Editor",
+      "LoadingPhase": "Default"
+    }
+  ]
 }
