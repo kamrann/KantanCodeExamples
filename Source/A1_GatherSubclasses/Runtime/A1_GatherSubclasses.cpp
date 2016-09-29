@@ -1,7 +1,7 @@
 // Copyright 2016 Cameron Angus
 
-#include "KantanCodeExamples.h"
-#include "_1_GatherSubclasses.h"
+#include "A1_GatherSubclassesPCH.h"
+#include "A1_GatherSubclasses.h"
 #include "AssetRegistryModule.h"
 
 #if WITH_EDITOR
@@ -9,7 +9,7 @@
 #endif
 
 
-namespace _1_GatherSubclasses
+namespace A1_GatherSubclasses
 {
 	namespace Detail
 	{
@@ -145,28 +145,28 @@ namespace _1_GatherSubclasses
 }
 
 
-void UArticle1_GatherSubclasses::Gather()
+void UA1_GatherSubclasses::Gather()
 {
 	DerivedSet.Empty();
 
 	if(BaseClass)
 	{
-		_1_GatherSubclasses::GetAllNativeSubclasses(DerivedSet, BaseClass, bAllowAbstract);
-		_1_GatherSubclasses::GetAllBlueprintSubclasses(DerivedSet, BaseClass, bAllowAbstract, FString());
+		A1_GatherSubclasses::GetAllNativeSubclasses(DerivedSet, BaseClass, bAllowAbstract);
+		A1_GatherSubclasses::GetAllBlueprintSubclasses(DerivedSet, BaseClass, bAllowAbstract, FString());
 	}
 }
 
-void UArticle1_GatherSubclasses::PostLoad()
+void UA1_GatherSubclasses::PostLoad()
 {
 	Super::PostLoad();
 
 	Gather();
 }
 
-void UArticle1_GatherSubclasses::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
+void UA1_GatherSubclasses::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
-	static const FName NAME_Base = GET_MEMBER_NAME_CHECKED(UArticle1_GatherSubclasses, BaseClass);
-	static const FName NAME_AllowAbstract = GET_MEMBER_NAME_CHECKED(UArticle1_GatherSubclasses, bAllowAbstract);
+	static const FName NAME_Base = GET_MEMBER_NAME_CHECKED(UA1_GatherSubclasses, BaseClass);
+	static const FName NAME_AllowAbstract = GET_MEMBER_NAME_CHECKED(UA1_GatherSubclasses, bAllowAbstract);
 
 	if(PropertyChangedEvent.Property != nullptr)
 	{

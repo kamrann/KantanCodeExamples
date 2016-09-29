@@ -5,7 +5,12 @@
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "KantanCodeExamplesRuntime",
+			"Name": "KantanCodeExamplesCommon",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "A1_GatherSubclasses",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}

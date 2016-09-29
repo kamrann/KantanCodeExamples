@@ -1,12 +1,12 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright 2016 Cameron Angus
 
 #pragma once
 
 #include "CoreUObject.h"
-#include "_1_GatherSubclasses.generated.h"
+#include "A1_GatherSubclasses.generated.h"
 
 
-namespace _1_GatherSubclasses
+namespace A1_GatherSubclasses
 {
 	namespace Detail
 	{
@@ -42,7 +42,7 @@ namespace _1_GatherSubclasses
 * Example class using properties to demonstrate gathering of all subclasses (native and blueprint) of a given class.
 */
 UCLASS(Blueprintable)
-class UArticle1_GatherSubclasses: public UObject
+class UA1_GatherSubclasses: public UObject
 {
 	GENERATED_BODY()
 
