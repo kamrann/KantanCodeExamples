@@ -59,12 +59,19 @@ public:
 	UPROPERTY(Transient, VisibleAnywhere, Category = "Example")
 	TArray< TAssetSubclassOf< UObject > > DerivedSet;
 
-protected:
+public:
+	UFUNCTION(BlueprintCallable, Category = "Example")
 	void Gather();
+
+	UFUNCTION(BlueprintCallable, Category = "Example")
+	void PrintSubclasses();
 
 public:
 	virtual void PostLoad() override;
+
+#if WITH_EDITOR
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
 };
 
 

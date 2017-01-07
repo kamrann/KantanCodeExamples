@@ -145,6 +145,19 @@ namespace A1_GatherSubclasses
 }
 
 
+void UA1_GatherSubclasses::PrintSubclasses()
+{
+	if(BaseClass)
+	{
+		UE_LOG(LogKantanCode, Log, TEXT("[%s] Subclasses gathered with base '%s':"), *GetName(), *BaseClass->GetName());
+		for(auto& AssetClass : DerivedSet)
+		{
+			auto LoadedClass = AssetClass.LoadSynchronous();
+			UE_LOG(LogKantanCode, Log, TEXT("%s %s"), AssetClass.IsNull() ? TEXT("[NONE]") : *AssetClass.GetUniqueID().ToString(), !AssetClass.IsNull() && !LoadedClass ? TEXT("_LOAD FAILED_") : TEXT(""));
+		}
+	}
+}
+
 void UA1_GatherSubclasses::Gather()
 {
 	DerivedSet.Empty();
@@ -160,8 +173,14 @@ void UA1_GatherSubclasses::PostLoad()
 {
 	Super::PostLoad();
 
-	Gather();
+	if(!IsTemplate())
+	{
+//		Gather();
+	}
 }
+
+
+#if WITH_EDITOR
 
 void UA1_GatherSubclasses::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
@@ -173,12 +192,12 @@ void UA1_GatherSubclasses::PostEditChangeProperty(FPropertyChangedEvent& Propert
 		const FName PropName = PropertyChangedEvent.MemberProperty->GetFName();
 		if(PropName == NAME_Base || PropName == NAME_AllowAbstract)
 		{
-			Gather();
+//			Gather();
 		}
 	}
 
 	Super::PostEditChangeProperty(PropertyChangedEvent);
 }
 
-
+#endif
 

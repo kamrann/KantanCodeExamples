@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "UObject.h"
+#include "Object.h"
 #include "A2_MyClass.generated.h"
 
 
