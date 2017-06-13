@@ -80,6 +80,10 @@ namespace A1_GatherSubclasses
 			// Load the asset registry module
 			FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked< FAssetRegistryModule >(FName("AssetRegistry"));
 			IAssetRegistry& AssetRegistry = AssetRegistryModule.Get();
+			// The asset registry is populated asynchronously at startup, so there's no guarantee it has finished.
+			// This simple approach just runs a synchronous scan on the entire content directory.
+			// Better solutions would be to specify only the path to where the relevant blueprints are,
+			// or to register a callback with the asset registry to be notified of when it's finished populating.
 			TArray< FString > ContentPaths;
 			ContentPaths.Add(TEXT("/Game"));
 			AssetRegistry.ScanPathsSynchronous(ContentPaths);
