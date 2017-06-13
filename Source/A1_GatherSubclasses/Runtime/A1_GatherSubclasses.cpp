@@ -80,6 +80,9 @@ namespace A1_GatherSubclasses
 			// Load the asset registry module
 			FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked< FAssetRegistryModule >(FName("AssetRegistry"));
 			IAssetRegistry& AssetRegistry = AssetRegistryModule.Get();
+			TArray< FString > ContentPaths;
+			ContentPaths.Add(TEXT("/Game"));
+			AssetRegistry.ScanPathsSynchronous(ContentPaths);
 
 			FName BaseClassName = Base->GetFName();
 
