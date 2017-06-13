@@ -5,29 +5,17 @@ using System.Collections.Generic;
 
 public class KantanCodeExamplesEditorTarget : TargetRules
 {
-	public KantanCodeExamplesEditorTarget(TargetInfo Target)
+	public KantanCodeExamplesEditorTarget(TargetInfo Target): base(Target)
 	{
 		Type = TargetType.Editor;
-	}
 
-	//
-	// TargetRules interface.
-	//
-
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.AddRange( new string[] {
+		ExtraModuleNames.AddRange( new string[] {
 			"KantanCodeExamplesCommon",
 			
 			"A1_GatherSubclasses",
 			
 			"A2_DetailsCustomization",
 			"A2_DetailsCustomizationEditor",
-			}
-			);
+		});
 	}
 }

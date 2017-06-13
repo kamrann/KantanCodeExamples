@@ -1,6 +1,7 @@
 // Copyright 2016 Cameron Angus
 
-#include "KantanCodeExamplesCommonPCH.h"
+#include "KantanCodeExamplesCommon.h"
+
 
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, KantanCodeExamplesCommon, "KantanCodeExamplesCommon" );
 

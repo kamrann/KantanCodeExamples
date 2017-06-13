@@ -1,8 +1,10 @@
 // Copyright 2016 Cameron Angus
 
-#include "A1_GatherSubclassesPCH.h"
 #include "A1_GatherSubclasses.h"
+#include "KantanCodeExamplesCommon.h"
+
 #include "AssetRegistryModule.h"
+#include "ARFilter.h"
 
 #if WITH_EDITOR
 #include "KismetEditorUtilities.h"

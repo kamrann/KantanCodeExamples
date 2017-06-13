@@ -4,8 +4,11 @@ using UnrealBuildTool;
 
 public class A1_GatherSubclasses : ModuleRules
 {
-	public A1_GatherSubclasses(TargetInfo Target)
+	public A1_GatherSubclasses(ReadOnlyTargetRules Target) : base(Target)
 	{
+		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+		bEnforceIWYU = false;
+
 		PublicDependencyModuleNames.AddRange(new string[] {
 			"Core",
 			"CoreUObject",

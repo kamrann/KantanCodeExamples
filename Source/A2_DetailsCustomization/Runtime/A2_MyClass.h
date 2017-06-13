@@ -3,6 +3,7 @@
 #pragma once
 
 #include "Object.h"
+#include "ScriptMacros.h"
 #include "A2_MyClass.generated.h"
 
 

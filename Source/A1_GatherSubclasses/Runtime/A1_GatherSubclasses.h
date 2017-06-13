@@ -2,7 +2,8 @@
 
 #pragma once
 
-#include "CoreUObject.h"
+#include "Object.h"
+#include "ScriptMacros.h"
 #include "A1_GatherSubclasses.generated.h"
 
 

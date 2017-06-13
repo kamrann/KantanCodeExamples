@@ -1,6 +1,6 @@
 // Copyright 2016 Cameron Angus
 
-#include "A2_DetailsCustomizationEditorPCH.h"
+#include "ModuleManager.h"
 #include "PropertyEditorModule.h"
 #include "A2_MyClassCustomization.h"
 

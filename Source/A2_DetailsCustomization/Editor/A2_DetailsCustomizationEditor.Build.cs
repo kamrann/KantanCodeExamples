@@ -4,8 +4,11 @@ using UnrealBuildTool;
 
 public class A2_DetailsCustomizationEditor : ModuleRules
 {
-	public A2_DetailsCustomizationEditor(TargetInfo Target)
+	public A2_DetailsCustomizationEditor(ReadOnlyTargetRules Target) : base(Target)
 	{
+		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+		bEnforceIWYU = false;
+
 		PublicDependencyModuleNames.AddRange(new string[] {
 			"Core",
 			"CoreUObject",
