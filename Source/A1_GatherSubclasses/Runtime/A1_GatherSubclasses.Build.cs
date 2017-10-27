@@ -18,7 +18,7 @@ public class A1_GatherSubclasses : ModuleRules
 			"KantanCodeExamplesCommon",
 		});
 
-		if(UEBuildConfiguration.bBuildEditor)
+		if(Target.bBuildEditor)
 		{
 			PrivateDependencyModuleNames.Add("UnrealEd");
 		}
