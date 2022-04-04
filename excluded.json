@@ -1,0 +1,12 @@
+[
+  "linalg",
+  "range-v3",
+  "inplace-function",
+  "json",
+  "fmt",
+  "stud-uuid",
+  "asio",
+  "websocketpp",
+  "gsl",
+  "yasmine"
+]
