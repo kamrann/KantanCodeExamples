@@ -1,4 +1,7 @@
 [
+  "kcore",
+  "kdeps",
+
   "linalg",
   "range-v3",
   "inplace-function",
